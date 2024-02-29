@@ -4,12 +4,33 @@ import java.io.IOException;
 import java.io.Serializable;
 
 public class State implements Serializable {
+
+    private User Asker;
+    private User Responder;
     private String Ask;
     private String Answer;
 
-    public State(String Ask, String Answer) throws IOException {
-        this.Ask = Ask;
-        this.Answer = Answer;
+    public State(User asker, User responder, String ask, String answer) {
+        Asker = asker;
+        Responder = responder;
+        Ask = ask;
+        Answer = answer;
+    }
+
+    public User getAsker() {
+        return Asker;
+    }
+
+    public void setAsker(User asker) {
+        Asker = asker;
+    }
+
+    public User getResponder() {
+        return Responder;
+    }
+
+    public void setResponder(User responder) {
+        Responder = responder;
     }
 
     public String getAsk() {
