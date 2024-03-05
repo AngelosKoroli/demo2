@@ -2,8 +2,11 @@ package com.example.demo2;
 
 import javafx.scene.image.Image;
 
+import java.util.ArrayList;
+
 public class User {
 
+    static ArrayList<User> allUsers;
     private String firstName;
     private String lastName;
     private int grade;
@@ -14,6 +17,10 @@ public class User {
         this.lastName = lastName;
         this.grade = grade;
         this.image = image;
+        if (allUsers == null) {
+            allUsers = new ArrayList<User>();
+        }
+        allUsers.add(this);
     }
 
     public String getFirstName() {
@@ -46,5 +53,13 @@ public class User {
 
     public void setImage(Image image) {
         this.image = image;
+    }
+
+    static void saveUsers() {
+
+    }
+
+    static void restoreUsers() {
+
     }
 }

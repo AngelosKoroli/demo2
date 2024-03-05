@@ -18,9 +18,8 @@ public class HelloController2 {
     public TableColumn<State, String> answer;
 
     public void initialize() throws Exception {
-        if(false) {
-            this.restoreData();
-        }
+        State.restoreStates();
+
         ask.setCellValueFactory(new PropertyValueFactory<State, String>("ask"));
         ask.setCellFactory(TextFieldTableCell.forTableColumn());
         ask.setOnEditCommit(event -> {
