@@ -17,6 +17,7 @@ public class HelloController2 {
     public TableColumn<State, String> ask;
     public TableColumn<State, String> answer;
 
+    public boolean textPickedBoolean;
     public void initialize() throws Exception {
         if(false) {
             this.restoreData();
