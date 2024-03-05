@@ -2,9 +2,10 @@ package com.example.demo2;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class State implements Serializable {
-
+    static ArrayList<State> allStates;
     private User Asker;
     private User Responder;
     private String Ask;
@@ -15,6 +16,10 @@ public class State implements Serializable {
         Responder = responder;
         Ask = ask;
         Answer = answer;
+        if (allStates == null) {
+            allStates = new ArrayList<State>();
+        }
+        allStates.add(this);
     }
 
     public User getAsker() {
@@ -48,4 +53,13 @@ public class State implements Serializable {
     public void setAnswer(String answer) {
         Answer = answer;
     }
+
+    static void saveStates() {
+
+    }
+
+    static void restoreStates() {
+
+    }
+
 }

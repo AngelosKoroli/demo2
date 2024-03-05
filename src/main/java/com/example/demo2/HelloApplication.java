@@ -9,18 +9,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
-    HelloController2 cont;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("View2.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 605);
-        cont = fxmlLoader.getController();
         stage.setScene(scene);
         stage.show();
     }
     @Override
     public void stop() throws Exception {
-        cont.saveData();
+        User.saveUsers();
+        State.saveStates();
     }
     public static void main(String[] args) {
         launch();
