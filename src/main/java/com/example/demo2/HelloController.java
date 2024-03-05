@@ -44,7 +44,7 @@ public class HelloController {
 
     }
     public void bbButtonPress(ActionEvent event) throws Exception {
-        // Mr. Hernandez wrote this
+        // Mr. Hernandez wrote this!
         Parent root = FXMLLoader.load(getClass().getResource("View2.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
