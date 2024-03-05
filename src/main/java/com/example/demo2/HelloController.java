@@ -17,6 +17,10 @@ public class HelloController {
     public Button bulletinBoard;
     public ImageView imageView;
 
+    public void initialize() throws Exception {
+
+    }
+
     public void nameEntered(){
 
     }

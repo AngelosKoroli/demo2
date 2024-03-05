@@ -9,23 +9,22 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="605.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.HelloController">
+<AnchorPane prefHeight="605.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.HelloController2">
    <children>
       <Text layoutX="231.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bulletin Board">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField layoutX="181.0" layoutY="443.0" prefHeight="66.0" prefWidth="239.0" />
-      <Button layoutX="127.0" layoutY="545.0" mnemonicParsing="false" text="Ask" />
-      <Button layoutX="420.0" layoutY="545.0" mnemonicParsing="false" text="Answer" />
+      <TextField fx:id="Statement" layoutX="181.0" layoutY="443.0" onAction="#StatementEntered" prefHeight="66.0" prefWidth="239.0" />
+      <Button fx:id="Ask" layoutX="127.0" layoutY="545.0" mnemonicParsing="false" onAction="#AskButtonPressed" text="Ask" />
+      <Button fx:id="Answer" layoutX="420.0" layoutY="545.0" mnemonicParsing="false" onAction="#AnswerButtonPressed" text="Answer" />
       <Pane layoutX="43.0" layoutY="37.0" prefHeight="398.0" prefWidth="515.0">
          <children>
-            <TableView prefHeight="398.0" prefWidth="515.0">
+            <TableView fx:id="tableView" prefHeight="398.0" prefWidth="515.0">
               <columns>
-                <TableColumn prefWidth="255.0" text="Questions:" />
-                  <TableColumn prefWidth="244.0" text="Answers" />
+                <TableColumn fx:id="ask" prefWidth="255.0" text="Questions:" />
+                  <TableColumn fx:id="answer" prefWidth="244.0" text="Answers" />
               </columns>
             </TableView>
          </children>
