@@ -21,6 +21,7 @@ public class HelloApplication extends Application {
         User.saveUsers();
         State.saveStates();
     }
+    //hi
     public static void main(String[] args) {
         launch();
     }
