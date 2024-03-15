@@ -11,7 +11,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 public class HelloController {
 
@@ -38,10 +41,16 @@ public class HelloController {
 
     }
     public void selectFile(){
-
+        // Brandon is gonna do this !!!!
+        FileChooser fileChooser = new FileChooser();
+        //File selectedFile = fileChooser.showOpenDialog(stage);
     }
-    public void userCreate(){
+    public void LogIn(){
+        // abdi is gonna do this
 
+        // identify user
+        HelloController2.currentUser = User.allUsers.get(0);
+        bulletinBoard.setDisable(false);
     }
     public void bbButtonPress(ActionEvent event) throws Exception {
         // Mr. Hernandez wrote this!

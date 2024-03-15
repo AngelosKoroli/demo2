@@ -17,7 +17,7 @@
       <TextField fx:id="grade" layoutX="229.0" layoutY="305.0" onAction="#gradeEntered" />
       <Text layoutX="239.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile:" wrappingWidth="44.353515625" />
       <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="211.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="createUser" layoutX="269.0" layoutY="563.0" mnemonicParsing="false" onAction="#userCreate" text="Create User" />
+      <Button fx:id="createUser" layoutX="269.0" layoutY="563.0" mnemonicParsing="false" onAction="#LogIn" text="Log In" />
       <Button fx:id="selectFile" layoutX="283.0" layoutY="353.0" mnemonicParsing="false" onAction="#selectFile" text="Select File" />
       <Text layoutX="139.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Q&amp;A Bulletin Board!" textAlignment="CENTER" wrappingWidth="342.21630859375">
          <font>
@@ -29,6 +29,6 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Button fx:id="bulletinBoard" layoutX="476.0" layoutY="563.0" mnemonicParsing="false" onAction="#bbButtonPress" text="Bulletin Board -&gt;" />
+      <Button fx:id="bulletinBoard" disable="true" layoutX="476.0" layoutY="563.0" mnemonicParsing="false" onAction="#bbButtonPress" text="Bulletin Board -&gt;" />
    </children>
 </Pane>

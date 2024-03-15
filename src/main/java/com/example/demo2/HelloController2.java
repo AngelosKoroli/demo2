@@ -17,7 +17,10 @@ public class HelloController2 {
     public TableColumn<State, String> ask;
     public TableColumn<State, String> answer;
 
+    static User currentUser;
+
     public void initialize() throws Exception {
+        System.out.println("The current user is: " + currentUser.getFirstName() + " " + currentUser.getLastName());
         State.restoreStates();
 
         ask.setCellValueFactory(new PropertyValueFactory<State, String>("ask"));
