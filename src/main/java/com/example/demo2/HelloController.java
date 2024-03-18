@@ -9,12 +9,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class HelloController {
 
@@ -40,10 +43,14 @@ public class HelloController {
     public void gradeEntered(){
 
     }
-    public void selectFile(){
+    public void selectFile(ActionEvent event) throws FileNotFoundException {
         // Brandon is gonna do this !!!!
         FileChooser fileChooser = new FileChooser();
-        //File selectedFile = fileChooser.showOpenDialog(stage);
+        Stage stage = (Stage)(((Node)(event.getSource())).getScene().getWindow());
+        File selectedFile = fileChooser.showOpenDialog(stage);
+        Image selectedImage = new Image(new FileInputStream(selectedFile));
+        imageView.setImage(selectedImage);
+        System.out.println(selectedFile);
     }
     public void LogIn(){
         // abdi is gonna do this
