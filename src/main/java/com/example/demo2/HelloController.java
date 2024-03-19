@@ -23,8 +23,8 @@ public class HelloController {
 
     public TextField firstName;
     public TextField lastName;
-    public TextField grade;
-    public Button createUser;
+    public TextField idText;
+    public Button loginButton;
     public Button selectFile;
     public Button bulletinBoard;
     public ImageView imageView;
@@ -40,9 +40,7 @@ public class HelloController {
     public void lastNameEntered(){
 
     }
-    public void gradeEntered(){
 
-    }
     public void selectFile(ActionEvent event) throws FileNotFoundException {
         // Brandon is gonna do this !!!!
         FileChooser fileChooser = new FileChooser();
@@ -58,6 +56,17 @@ public class HelloController {
         // identify user
         HelloController2.currentUser = User.allUsers.get(0);
         bulletinBoard.setDisable(false);
+        //write code here
+        int idEntered = Integer.parseInt(idText.getText());
+        for ( User eachUser: User.allUsers) {
+               if (idEntered == eachUser.getid()) {
+                   HelloController2.currentUser = eachUser;
+               }
+        }
+        System.out.println("Logged in: " + HelloController2.currentUser.getFirstName() + " " + HelloController2.currentUser.getLastName());
+
+        // auto fill first and last name:
+
     }
     public void bbButtonPress(ActionEvent event) throws Exception {
         // Mr. Hernandez wrote this!
