@@ -1,13 +1,12 @@
 package com.example.demo2;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -37,7 +36,7 @@ public class HelloController {
 
     }
 
-    public void lastNameEntered(){
+    public void lastNameEntered() {
 
     }
 
@@ -57,17 +56,18 @@ public class HelloController {
         HelloController2.currentUser = User.allUsers.get(0);
         bulletinBoard.setDisable(false);
         //write code here
-        int idEntered = Integer.parseInt(idText.getText());
+        int IDEntered = Integer.parseInt(idText.getText());
         for ( User eachUser: User.allUsers) {
-               if (idEntered == eachUser.getid()) {
+               if (IDEntered == eachUser.getID()) {
                    HelloController2.currentUser = eachUser;
                }
         }
-        System.out.println("Logged in: " + HelloController2.currentUser.getFirstName() + " " + HelloController2.currentUser.getLastName());
-
+        firstName.setText(HelloController2.currentUser.getFirstName());
+        lastName.setText(HelloController2.currentUser.getLastName());
         // auto fill first and last name:
 
     }
+
     public void bbButtonPress(ActionEvent event) throws Exception {
         // Mr. Hernandez wrote this!
         Parent root = FXMLLoader.load(getClass().getResource("View2.fxml"));
@@ -77,4 +77,4 @@ public class HelloController {
         stage.show();
     }
 
-}
+    }

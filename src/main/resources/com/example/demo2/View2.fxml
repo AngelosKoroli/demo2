@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -17,8 +18,7 @@
          </font>
       </Text>
       <TextField fx:id="Statement" layoutX="181.0" layoutY="443.0" onAction="#StatementEntered" prefHeight="66.0" prefWidth="239.0" />
-      <Button fx:id="Ask" layoutX="127.0" layoutY="545.0" mnemonicParsing="false" onAction="#AskButtonPressed" text="Ask" />
-      <Button fx:id="Answer" layoutX="420.0" layoutY="545.0" mnemonicParsing="false" onAction="#AnswerButtonPressed" text="Answer" />
+      <Button fx:id="Ask" layoutX="154.0" layoutY="548.0" mnemonicParsing="false" onAction="#AskButtonPressed" text="Ask" />
       <Pane layoutX="43.0" layoutY="37.0" prefHeight="398.0" prefWidth="515.0">
          <children>
             <TableView fx:id="tableView" prefHeight="398.0" prefWidth="515.0">
@@ -29,5 +29,8 @@
             </TableView>
          </children>
       </Pane>
+      <Button fx:id="logout" layoutX="531.0" layoutY="563.0" mnemonicParsing="false" onAction="#LogOutButtonPressed" text="Log Out" />
+      <Button fx:id="Answer" layoutX="391.0" layoutY="548.0" mnemonicParsing="false" onAction="#AnswerButtonPressed" text="Answer" />
+      <Label fx:id="feedback" layoutX="181.0" layoutY="519.0" prefHeight="18.0" prefWidth="239.0" text="Label" />
    </children>
 </AnchorPane>
